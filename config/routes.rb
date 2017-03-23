@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   end
 
   resource :cart, only: [:show]
+
   resources :orderitems
 
   resources :users do
