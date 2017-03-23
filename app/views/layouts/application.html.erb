@@ -6,17 +6,19 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
   </head>
 
   <body>
     <%= render 'shared/navbar' %>
 
+    <div class="container">
+      <% if notice.present? %>
+        <p class="alert alert-info" role="alert"><%= notice %></p>
+      <% elsif alert.present? %>
+        <p class="alert alert-danger" role="alert"><%= alert %></p>
+      <% end %>
 
-  <div class='container'>
-
-    <%= yield %>
-
-  </div>
+      <%= yield %>
+    </div>
   </body>
 </html>

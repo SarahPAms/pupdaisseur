@@ -10,6 +10,6 @@ Rails.application.routes.draw do
 
   resources :users do
     resources :orders
-    resources :profile, only: [:show, :create, :update]
+    resources :profiles, only: [:show, :create, :update, :new, :edit]
   end
 end

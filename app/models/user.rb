@@ -6,4 +6,11 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
 
+  def has_profile?
+   profile.present? && !profile.id.nil?
+  end
+
+  def full_name
+   profile.full_name
+  end
 end
