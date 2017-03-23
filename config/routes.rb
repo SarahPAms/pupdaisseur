@@ -4,8 +4,12 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "products#index"
 
-  resources :products, only: [:index, :show]
-  resources :cart, only: [:show]
+  resources :products do
+    resource :cart, only: [:show]
+  end
+
+  resource :cart, only: [:show]
+
   resources :orderitems
 
   resources :users do
