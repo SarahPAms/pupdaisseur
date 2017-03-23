@@ -2,45 +2,14 @@
       <div class="container">
 
         <div class="row">
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" src="http://img.thrfun.com/img/002/683/raleigh_dalmatian_snowflake_tl.jpg" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" src="http://img.thrfun.com/img/002/683/raleigh_dalmatian_snowflake_tl.jpg" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" src="http://img.thrfun.com/img/002/683/raleigh_dalmatian_snowflake_tl.jpg" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
+          <% @products.each do |product|%>
 
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" src="http://img.thrfun.com/img/002/683/raleigh_dalmatian_snowflake_tl.jpg" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" src="http://img.thrfun.com/img/002/683/raleigh_dalmatian_snowflake_tl.jpg" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" src="http://img.thrfun.com/img/002/683/raleigh_dalmatian_snowflake_tl.jpg" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" src="http://img.thrfun.com/img/002/683/raleigh_dalmatian_snowflake_tl.jpg" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" src="http://img.thrfun.com/img/002/683/raleigh_dalmatian_snowflake_tl.jpg" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" src="http://img.thrfun.com/img/002/683/raleigh_dalmatian_snowflake_tl.jpg" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
+          <% if product.photos.any?%>
+            <% product.photos.each do |photo| %>
+            <%= image_tag photo.image %>
+            <%end%>
+          <% end %>
+        <% end %>
         </div>
-
       </div>
     </div>
