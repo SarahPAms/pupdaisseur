@@ -1,15 +1,18 @@
-<div class="album text-muted">
-      <div class="container">
-
-        <div class="row">
-          <% @products.each do |product|%>
-
-          <% if product.photos.any?%>
-            <% product.photos.each do |photo| %>
-            <%= image_tag photo.image %>
-            <%end%>
-          <% end %>
+<div class="row text-center">
+  <div class="col-lg-3 col-md-6 mb-4">
+    <div class="card">
+      <div class="row">
+        <% @products.each do |product|%>
+          <img class="card-img-top img-fluid"><%= image_tag product.photos.first.image %></img>
+          <div class="card-block">
+              <h4 class="card-title"><%= product.breed %></h4>
+              <p class="card-text"><%= product.description %></p>
+          </div>
+          <div class="card-footer">
+            <div class='btn btn-primary'><%= link_to "Details", product_path(product) %></div>
+          </div>
         <% end %>
-        </div>
       </div>
     </div>
+  </div>
+</div>
