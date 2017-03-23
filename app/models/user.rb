@@ -13,4 +13,11 @@ class User < ApplicationRecord
    profile.full_name
  end
 
+  def has_profile?
+   profile.present? && !profile.id.nil?
+  end
+
+  def full_name
+   profile.full_name
+  end
 end
