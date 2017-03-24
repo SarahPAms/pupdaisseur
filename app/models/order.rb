@@ -4,7 +4,7 @@ class Order < ApplicationRecord
   before_save :update_subtotal
 
   def subtotal
-    orderitems.collect { |oi| oi.valid? ? (oi.quantity.to_i * oi.order_price.to_f) : 0}.sum
+    orderitems.collect { |oi| oi.valid? ? (oi.quantity.to_i * oi.product.price.to_f) : 0}.sum
   end
 
   private

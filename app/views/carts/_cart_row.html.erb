@@ -13,6 +13,12 @@
             <%= f.number_field :quantity, value: orderitem.quantity.to_i, class: "form-control", min: 1 %>
             <%= f.hidden_field :product_id, value: product.id %>
           </div>
+          <div class="col-xs-8 text-right">
+            <div class="btn-group">
+              <%= f.submit "Update Quantity", class: "btn btn-primary" %>
+              <%= link_to "Delete", orderitem, { data: { confirm: "Are you sure you wish to delete the product '#{orderitem.product.breed}' from your cart?" }, method: :delete, remote: true, class: "btn btn-danger" } %>
+            </div>
+          </div>
         </div>
         <h4 class="text-right">Total Price: <span style="color: green"><%= number_to_currency orderitem.order_price %></span></h4>
       <% end %>
