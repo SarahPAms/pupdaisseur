@@ -2,7 +2,7 @@
 @import "bootstrap";
 
 img {
-  width: 100%;
+  width: 90%;
 }
 
 .row {
@@ -11,4 +11,9 @@ img {
 
 a {
   color: white;
+}
+
+card {
+  max-heigth: 300px;
+  border: 1px solid black;
 }

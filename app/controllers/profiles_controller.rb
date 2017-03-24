@@ -2,6 +2,10 @@ class ProfilesController < ApplicationController
   before_action :set_profile, only: [:edit, :update]
   before_action :authenticate_user!
 
+def show
+  @profile = Profile.find(params[:id])
+end
+
 def new
   @profile = Profile.new
 end
@@ -33,6 +37,6 @@ private
   end
 
   def profile_params
-    params.require(:profile).permit(:first_name, :last_name, :street_address, :city, :postcode, :country )
+    params.require(:profile).permit(:first_name, :last_name, :street_address, :city, :postcode, :country, :user_id )
   end
 end
