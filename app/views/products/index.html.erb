@@ -1,8 +1,8 @@
-<div class="row text-center">
-  <div class="col-lg-3 col-md-6 mb-4">
-    <div class="card">
-      <div class="row">
-        <% @products.each do |product|%>
+<div class="col-12">
+  <div class="row text-center">
+    <div class="col-lg-3 col-md-3 col-sm-3">
+      <% @products.each do |product|%>
+        <div class="card">
           <img class="card-img-top img-fluid"><%= image_tag product.photos.first.image %></img>
           <div class="card-block">
               <h4 class="card-title"><%= product.breed %></h4>
