@@ -3,67 +3,71 @@ Product.delete_all
 User.delete_all
 
 ###### Product#####
-    dog1= Product.create!(
-      breed: Faker::Cat.breed,
-      description: Faker::Lorem.paragraph,
-      origin: Faker::Address.country,
-      size: ["XS", "S", "M", "L", "XL"].sample,
-      coat: ["Smooth Coat", "Double Coat", "Wire Coat", "Curly Coat", "Long Coat", "Hairless Coat"].sample,
-      price: rand(300..1500),
-      behavior: ["Fluffy", "Family Friendly", "Guard dog", "Trainable", "Smart"].sample,
-      active: [true, false].sample
+  dog1= Product.create!(
+    breed: "Golden Retriever",
+    description: "There is something about a Golden puppy that makes everyone smile. They are used in a lot of commercials, and it’s no secret why—they are irresistible.",
+    origin: "Netherlands",
+    size: "S",
+    coat: "Smooth Coat",
+    price: 200,
+    active: true,
+    behavior: "Fluffy"
 
   )
-    dog2= Product.create!(
-      breed: Faker::Cat.breed,
-      description: Faker::Lorem.paragraph,
-      origin: Faker::Address.country,
-      size: ["XS", "S", "M", "L", "XL"].sample,
-      coat: ["Smooth Coat", "Double Coat", "Wire Coat", "Curly Coat", "Long Coat", "Hairless Coat"].sample,
-      price: rand(300..1500),
-      behavior: ["Fluffy", "Family Friendly", "Guard dog", "Trainable", "Smart"].sample,
-      active: [true, false].sample
-  )
-    dog3= Product.create!(
-      breed: Faker::Cat.breed,
-      description: Faker::Lorem.paragraph,
-      origin: Faker::Address.country,
-      size: ["XS", "S", "M", "L", "XL"].sample,
-      coat: ["Smooth Coat", "Double Coat", "Wire Coat", "Curly Coat", "Long Coat", "Hairless Coat"].sample,
-      price: rand(300..1500),
-      behavior: ["Fluffy", "Family Friendly", "Guard dog", "Trainable", "Smart"].sample,
-      active: [true, false].sample
-    )
-    dog4= Product.create!(
-      breed: Faker::Cat.breed,
-      description: Faker::Lorem.paragraph,
-      origin: Faker::Address.country,
-      size: ["XS", "S", "M", "L", "XL"].sample,
-      coat: ["Smooth Coat", "Double Coat", "Wire Coat", "Curly Coat", "Long Coat", "Hairless Coat"].sample,
-      price: rand(300..1500),
-      behavior: ["Fluffy", "Family Friendly", "Guard dog", "Trainable", "Smart"].sample,
-      active: [true, false].sample
-    )
-    dog5= Product.create!(
-      breed: Faker::Cat.breed,
-      description: Faker::Lorem.paragraph,
-      origin: Faker::Address.country,
-      size: ["XS", "S", "M", "L", "XL"].sample,
-      coat: ["Smooth Coat", "Double Coat", "Wire Coat", "Curly Coat", "Long Coat", "Hairless Coat"].sample,
-      price: rand(300..1500),
-      behavior: ["Fluffy", "Family Friendly", "Guard dog", "Trainable", "Smart"].sample,
-      active: [true, false].sample
-    )
+  dog2= Product.create!(
+    breed: "Labrador Retriever",
+    description: "Another breed that gets a lot of air-time as a puppy is the lab. And we all know why: their rolly-polly bodies and sweet face could sell anything.",
+    origin: "Netherlands",
+    size: "M",
+    coat: "Smooth Coat",
+    price: 200,
+    active: true,
+    behavior: "Fluffy"
 
-    dog6 = Product.create!(
-      breed: Faker::Cat.breed,
-      description: Faker::Lorem.paragraph,
-      origin: Faker::Address.country,
-      size: ["XS", "S", "M", "L", "XL"].sample,
-      coat: ["Smooth Coat", "Double Coat", "Wire Coat", "Curly Coat", "Long Coat", "Hairless Coat"].sample,
-      price: rand(300..1500),
-      behavior: ["Fluffy", "Family Friendly", "Guard dog", "Trainable", "Smart"].sample,
-      active: [true, false].sample
+  )
+  dog3= Product.create!(
+    breed: "Corgi",
+    description: "With their short little legs and ears that are bigger than their body, corgi puppies are absolutely adorable. To see one it so fall in love immediately.",
+    origin: "Germany",
+    size: "S",
+    coat: "Smooth Coat",
+    price: 300,
+    active: true,
+    behavior: "Fluffy"
+
+  )
+  dog4= Product.create!(
+    breed: "French Bulldog",
+    description: "Like the Pug and English Bulldog, something about the Frenchie’s flat face is endearing. Couple it with those too-big ears, and you have one cute pup.",
+    origin: "France",
+    size: "S",
+    coat: "Hairless Coat",
+    price: 200,
+    active: true,
+    behavior: "Family Friendly"
+
+  )
+  dog5= Product.create!(
+    breed: "Pomeranian",
+    description: "As a puppy, this breed looks like a little teddy bear. Their fluffy coat, tiny ears, and round eyes make it impossible to not want to pick them up and cuddle them.",
+    origin: "Netherladns",
+    size: "S",
+    coat: "Double Coat",
+    price: 250,
+    active: false,
+    behavior: "Fluffy"
+
+  )
+  dog6= Product.create!(
+    breed: "Cavalier King Charles Spaniel",
+    description: "If there was ever a dog breed that was born to give her owner the “sad look,” it would be the cavi. No one can resist this face.",
+    origin: "France",
+    size: "M",
+    coat: "Wire Coat",
+    price: 300,
+    active: true,
+    behavior: "Guard dog"
+
   )
 
 #####Photos#####

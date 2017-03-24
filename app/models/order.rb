@@ -1,16 +1,16 @@
 class Order < ApplicationRecord
-  belongs_to :user
+  #belongs_to :user
   has_many :orderitems
   before_save :update_subtotal
 
   def subtotal
-    orderitems.collect { |oi| oi.valid? ? (oi.quantity * oi.order_price) : 0}.sum
+    orderitems.collect { |oi| oi.valid? ? (oi.quantity.to_i * oi.order_price.to_f) : 0}.sum
   end
 
   private
 
   def update_subtotal
-    self[:subtotal] = subtotal
+    self[:total_price] = subtotal
   end
 
 end
