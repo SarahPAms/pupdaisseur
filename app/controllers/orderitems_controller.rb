@@ -1,4 +1,4 @@
-class OrderItemsController < ApplicationController
+class OrderitemsController < ApplicationController
   def create
     @order = current_order
     @orderitem = @order.orderitems.new(orderitem_params)
