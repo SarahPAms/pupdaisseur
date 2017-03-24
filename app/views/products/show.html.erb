@@ -1,0 +1,10 @@
+<h1 class="text-center"><%= @product.breed %></h1>
+
+  <% @product.photos.each do |photo| %>
+    <%= image_tag photo.image %>
+  <%end%>
+
+  <p>Breed: <%= @product.breed %></p>
+  <p> Origin: <%= @product.origin %></p>
+  <p>Coat: <%= @product.coat %></p>
+  <p>Description: <%= @product.description %></p>
