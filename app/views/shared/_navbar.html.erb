@@ -29,7 +29,7 @@
             <% if current_user.has_profile? %>
               <li><%= link_to "Edit Profile", user_profile_path(current_user.profile) %></li>
             <% else %>
-              <li><%= link_to "Create Profile", new_user_profile_path(current_user) %></li>
+              <li><%= link_to "Create Profile", new_user_profiles_path(current_user) %></li>
             <% end %>
             <li><%= link_to "Edit Password", edit_user_password_path %></li>
 

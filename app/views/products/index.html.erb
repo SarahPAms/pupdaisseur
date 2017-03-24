@@ -16,10 +16,9 @@
           <h4 class="card-title"><%= product.breed %></h4>
           <p class="card-text"><%= product.description %></p>
         </div>
-        <div class="card-footer">
 
-            <div class='btn btn-primary'><%= link_to "Details", product_path(product) %></div>
-          </div>
+          <div class='btn btn-primary' style="position: absolute; bottom: 30px"><%= link_to "Details", product_path(product) %></div>
+
       </div>
     </div>
     <%end%>
